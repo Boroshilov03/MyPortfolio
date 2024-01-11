@@ -5,7 +5,6 @@ import MainTitle from "./components/PageComp/HomeComp/MainTitle.jsx";
 import AboutPage from './components/PageComp/HomeComp/AboutPage.jsx';
 import WorkSection from "./components/PageComp/HomeComp/WorkSection.jsx";
 
-
 function App() {
 
     return (
