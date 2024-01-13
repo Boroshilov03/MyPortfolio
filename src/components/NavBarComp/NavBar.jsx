@@ -4,7 +4,7 @@ function NavBar(){
 
     return (
         <div className={"flex justify-between font-light text-lg"}>
-            <h1 className="ml-10">Mirlan Boroshilov</h1>
+            <h1 className="lg:ml-5">Mirlan Boroshilov</h1>
             <h1>STUDENT - CSULB</h1>
 
             <span className=" items-center border-2 px-2.5 py-0.5 rounded-full gap-2 lg:inline-flex hidden">
