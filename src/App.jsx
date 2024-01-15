@@ -16,7 +16,6 @@ function App() {
             <AboutPage />
             <WorkSection />
             <Service />
-            <Contact />
         </div>
     )
 

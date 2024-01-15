@@ -19,7 +19,7 @@ function AboutPage() {
             {/* About Page Section */}
             <div className="lg:w-1/2 ">
                 <h1 className={"font-bold"} style={{ fontSize: "30px" }}>About Page</h1>
-                <p className={"mt-5 font-light"} style={{ fontSize: "20px" }}>
+                <p className={"mt-5 font-light text-justify"} style={{ fontSize: "20px" }}>
                 Hello 🙋
 
                 I am an undergraduate with a degree in computer science. 
