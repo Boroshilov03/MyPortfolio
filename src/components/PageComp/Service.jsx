@@ -33,7 +33,7 @@ const Service = () => {
 
 
     return ( 
-        <div className="lg:ml-5">
+        <div className="lg:ml-6">
             <h1 className="lg:text-[40px] text-[35px] font-light" >I can help you with ... </h1>
             <ul className="lg:flex justify-between mt-5">
                 {

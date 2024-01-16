@@ -1,16 +1,13 @@
 
 const ProjectCard = ({ dataItem }) => {
-    const { link, title, index, website } = dataItem;
+    const { link, title, website } = dataItem;
 
     return (
-        <li className="lg:w-[47%]">
+        <li className="lg:w-[47%] mb-10">
             {/* Use a regular anchor tag for external links */}
             <a href={website} target="_blank" rel="noopener noreferrer">
                 <img className={'w-full h-full'} src={link} alt={title} />
-                <div className="flex items-start space-x-1 text-start">
-                    <h1 className="text-xs text-gray-1000 pt-1">0{index + 1}</h1>
-                    <h2 className="text-xl text-gray-1000">{title}</h2>
-                </div>
+                <h2 className="lg:text-[40px] text-[35px] font-light">{title}</h2>
             </a>
         </li>
     );
@@ -43,7 +40,7 @@ function WorkSection() {
 
     return (
         <div className={"border-b-4 pb-14"}>
-            <h1 className={"font-bold lg:ml-10"} style={{ fontSize: "30px" }}>Projects</h1>
+            <h1 className={"lg:ml-10 lg:text-[40px] text-[35px] font-bold"}>Projects</h1>
 
             <ul className={"flex flex-wrap gap-10 justify-center mt-5"}>
                 {
