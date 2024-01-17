@@ -10,7 +10,7 @@ import Contact from "./components/NavBarComp/Contact.jsx"
 function App() {
 
     return (
-        <div className={"flex flex-col gap-7 p-5"}>
+        <div className={"flex flex-col gap-7 p-5 "}>
             <NavBar />
             <MainTitle />
             <AboutPage />
