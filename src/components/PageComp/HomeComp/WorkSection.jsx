@@ -44,7 +44,7 @@ function WorkSection() {
   ];
 
   return (
-    <div className={"border-b-4 pb-14"}>
+    <div id="workSection" className={"border-b-4 pb-14"}>
       <h1 className={"lg:ml-10 lg:text-[40px] text-[35px] font-bold"}>
         Projects
       </h1>

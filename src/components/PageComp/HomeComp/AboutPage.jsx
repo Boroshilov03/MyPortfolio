@@ -4,7 +4,7 @@ import LaHacks from "/src/assets/lahacks1.png"
 import BeachHacks from "/src/assets/large-removebg-preview.png"
 function AboutPage() {
     return (
-        <div className="lg:flex block items-start justify-evenly border-b-4 pb-9">
+        <div id="aboutSection" className="lg:flex block items-start justify-evenly border-b-4 pb-9">
             {/* Relevant Experience Section */}
             <div className="lg:w-1/2 lg:ml-10">
                 <h1 className={"lg:text-[40px] text-[35px] font-bold"}>Relevant Experience</h1>

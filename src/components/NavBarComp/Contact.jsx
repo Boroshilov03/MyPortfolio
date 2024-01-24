@@ -18,7 +18,7 @@ const Contact = () => {
       <h1 className="font-semibold lg:text-9xl text-5xl" style={headingStyle}>CONTACT ME</h1>
     </div>
     {/* <h1 className="lg:ml-5 lg:text-[40px] text-[35px] font-bold my-8">Let's connect!</h1> */}
-    <div className="lg:flex lg:ml-5 pb-14 my-8">
+    <div id="contactSection" className="lg:flex lg:ml-5 pb-14 my-8">
       <div className="w-1/2">
         <p className="lg:text-[40px] text-[35px] font-light">Contact</p>
         <div className="flex flex-col items-start mt-5 gap-2">
