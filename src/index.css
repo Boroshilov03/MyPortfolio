@@ -12,8 +12,8 @@ body {
   font-family: "Inter Tight", sans-serif;
 }
 
-.glassCard{
-  background: rgba(255, 255, 255, 0.10);
+.glassCard {
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
@@ -36,6 +36,53 @@ body {
   margin: 5px 0; /* Adjust the margin to control the space around the separator */
 }
 
-html{
+html {
   scroll-behavior: smooth;
+}
+
+#light {
+  background-color: white;
+}
+
+#dark {
+  background-color: #0d1013;
+  color: #f6faff;
+}
+
+.toggle {
+  background-color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.input {
+  display: none;
+}
+
+.icon {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  transition: transform 500ms;
+}
+
+.icon--moon {
+  transition-delay: 200ms;
+}
+
+.icon--sun {
+  transform: scale(0);
+}
+
+#switch:checked + .icon--moon {
+  transform: rotate(360deg) scale(0);
+}
+
+#switch:checked ~ .icon--sun {
+  transition-delay: 200ms;
+  transform: scale(1) rotate(360deg);
 }

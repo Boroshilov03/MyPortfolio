@@ -43,7 +43,7 @@ const SkillSet = () => {
         </div>
         <div className="box w-32 h-10 hover:scale-105 transform transition-transform duration-500">
           <img
-            // style={{ filter: "drop-shadow(0 0 15px rgba(255, 255, 0, 0.5))" }}
+            style={{ filter: "drop-shadow(0 0 15px rgba(255, 255, 0, 0.5))" }}
             width={100}
             height={100}
             src={PYTHON}
@@ -70,7 +70,7 @@ const SkillSet = () => {
         </div>
         <div className="box w-32 h-10 hover:scale-105 transform transition-transform duration-500">
           <img
-            // style={{ filter: "drop-shadow(0 0 15px rgba(144, 238, 144, 0.8))" }}
+            style={{ filter: "drop-shadow(0 0 15px rgba(144, 238, 144, 0.3))" }}
             width={100}
             height={100}
             src={NODEJS}

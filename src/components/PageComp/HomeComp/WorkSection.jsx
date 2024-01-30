@@ -2,17 +2,24 @@ const ProjectCard = ({ dataItem }) => {
   const { link, title, website } = dataItem;
 
   return (
-    <li className="lg:w-[47%] mb-10">
-      {/* Use a regular anchor tag for external links */}
-      <a href={website} target="_blank" rel="noopener noreferrer">
+    <li className="lg:w-[47%] mb-10 relative">
+      <a
+        href={website}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ position: "relative", display: "block" }}
+      >
         <img
           className={
-            "object-cover hover:scale-95 transform transition-transform duration-500 w-full h-full"
+            "object-cover hover:scale-95 transform transition-transform duration-500 w-full h-full rounded-lg"
           }
           src={link}
           alt={title}
           style={{ height: "450px" }}
         />
+
+        {/* <i className="text-7xl text-gray-300  absolute bi bi-arrow-up-right-circle top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></i>{" "} */}
+        {/* Position the arrow in the middle */}
         <h2 className="lg:text-[40px] text-[35px] font-light">{title}</h2>
       </a>
     </li>

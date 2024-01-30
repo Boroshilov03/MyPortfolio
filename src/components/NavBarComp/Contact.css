@@ -34,3 +34,8 @@ a:after {
   transition-duration: 400ms;
   transition-property: width, left;
 }
+
+
+#dark .contact_dark {
+  color: #f6faff;
+}
