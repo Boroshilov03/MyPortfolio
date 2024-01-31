@@ -40,17 +40,19 @@ html {
   scroll-behavior: smooth;
 }
 
-#light {
+.light,
+.dark {
+  transition: background-color 1s ease, color 1s ease; /* Add transition for background-color and color */
+}
+.light {
   background-color: white;
 }
-
-#dark {
+.dark {
   background-color: #0d1013;
   color: #f6faff;
 }
 
 .toggle {
-  background-color: #fff;
   width: 56px;
   height: 56px;
   border-radius: 50%;
