@@ -48,6 +48,16 @@ function WorkSection() {
       website: "https://github.com/Boroshilov03/MovieLand",
       link: "https://media.discordapp.net/attachments/1030352196480540712/1199579301838864434/image.png?ex=65c30e48&is=65b09948&hm=733a42073a26d99379a56db004473297e9eefd740a562e772476ca8e0439d16e&=&format=webp&quality=lossless&width=1139&height=554",
     },
+    // {
+    //   title: "GPT3- UI/UX",
+    //   website: "https://github.com/Boroshilov03/MovieLand",
+    //   link: "https://media.discordapp.net/attachments/1030352196480540712/1207079262117695568/image.png?ex=65de572a&is=65cbe22a&hm=a0a48a5740275059b9a36b19771fde61e8c51bd96618ad662da7bfe01ae1fa1c&=&format=webp&quality=lossless&width=1440&height=651",
+    // },
+    // {
+    //   title: "GPT3- UI/UX",
+    //   website: "https://github.com/Boroshilov03/MovieLand",
+    //   link: "https://media.discordapp.net/attachments/1030352196480540712/1207079262117695568/image.png?ex=65de572a&is=65cbe22a&hm=a0a48a5740275059b9a36b19771fde61e8c51bd96618ad662da7bfe01ae1fa1c&=&format=webp&quality=lossless&width=1440&height=651",
+    // },
   ];
 
   return (
