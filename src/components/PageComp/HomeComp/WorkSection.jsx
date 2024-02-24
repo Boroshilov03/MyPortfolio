@@ -1,3 +1,10 @@
+import BudgetPal from "/src/assets/BudgetP/Sign Up.png";
+import J4J from "/src/assets/Projects/J4J-Main.png";
+import MovieLand from "/src/assets/Projects/MovieLand.png";
+import QuoteGen from "/src/assets/Projects/QuoteGen.png";
+import GPT from "/src/assets/Projects/GPT-3.png";
+import Music from "/src/assets/Projects/Music.png";
+
 const ProjectCard = ({ dataItem }) => {
   const { link, title, website } = dataItem;
 
@@ -29,35 +36,35 @@ const ProjectCard = ({ dataItem }) => {
 function WorkSection() {
   const data = [
     {
-      title: "BudjetPal",
+      title: "BudgetPal",
       website: "https://github.com/Boroshilov03/BudgetPal",
-      link: "https://media.discordapp.net/attachments/1030352196480540712/1199465254879498250/Dashboard.png?ex=65c2a411&is=65b02f11&hm=fabef57c7b5a85c0d543539e7fa63e95cc2c280bd8b1916f094861a72b762154&=&format=webp&quality=lossless&width=1020&height=662",
+      link: BudgetPal,
     },
     {
       title: "QuoteGenerator",
       website: "https://boroshilov03.github.io/QuoteGen/",
-      link: "https://media.discordapp.net/attachments/1030352196480540712/1199467366812221570/image_1.png?ex=65c2a609&is=65b03109&hm=d77d2e364b57145f9562934ca8466db20ea4cf1732e7b7d351553a00e7560b6c&=&format=webp&quality=lossless&width=1020&height=662",
+      link: QuoteGen,
     },
     {
       title: "Job4Job",
       website: "https://github.com/Boroshilov03/Job4Job",
-      link: "https://media.discordapp.net/attachments/1030352196480540712/1199580043094016070/image.png?ex=65c30ef9&is=65b099f9&hm=84bd10356e465770b079890fb516bd477b3f8509d8164af69c25eea4bcc5be1f&=&format=webp&quality=lossless&width=909&height=554",
+      link: J4J,
     },
     {
       title: "MovieLand",
       website: "https://github.com/Boroshilov03/MovieLand",
-      link: "https://media.discordapp.net/attachments/1030352196480540712/1199579301838864434/image.png?ex=65c30e48&is=65b09948&hm=733a42073a26d99379a56db004473297e9eefd740a562e772476ca8e0439d16e&=&format=webp&quality=lossless&width=1139&height=554",
+      link: MovieLand,
+    },
+    {
+      title: "GPT3- UI/UX",
+      website: "https://github.com/Boroshilov03/MovieLand",
+      link: GPT,
     },
     // {
-    //   title: "GPT3- UI/UX",
+    //   title: "Music",
     //   website: "https://github.com/Boroshilov03/MovieLand",
-    //   link: "https://media.discordapp.net/attachments/1030352196480540712/1207079262117695568/image.png?ex=65de572a&is=65cbe22a&hm=a0a48a5740275059b9a36b19771fde61e8c51bd96618ad662da7bfe01ae1fa1c&=&format=webp&quality=lossless&width=1440&height=651",
-    // },
-    // {
-    //   title: "GPT3- UI/UX",
-    //   website: "https://github.com/Boroshilov03/MovieLand",
-    //   link: "https://media.discordapp.net/attachments/1030352196480540712/1207079262117695568/image.png?ex=65de572a&is=65cbe22a&hm=a0a48a5740275059b9a36b19771fde61e8c51bd96618ad662da7bfe01ae1fa1c&=&format=webp&quality=lossless&width=1440&height=651",
-    // },
+    //   link: Music
+    // }
   ];
 
   return (

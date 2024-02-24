@@ -64,7 +64,7 @@ function AboutPage() {
           and tools, constantly seeking new challenges to fuel my passion for
           problem-solving. Let's code our way to a brighter tomorrow!
         </p>
-        <div className="mt-5">
+        {/* <div className="mt-5">
           <button class="cursor-pointer group relative flex gap-1 px-8 py-4 bg-black bg-opacity-80 text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 transition font-semibold shadow-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ function AboutPage() {
               Download Resume
             </a>
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
