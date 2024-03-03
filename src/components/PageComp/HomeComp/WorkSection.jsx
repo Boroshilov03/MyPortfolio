@@ -57,7 +57,7 @@ function WorkSection() {
     },
     {
       title: "GPT3- UI/UX",
-      website: "https://github.com/Boroshilov03/MovieLand",
+      website: "https://github.com/Boroshilov03/GPT3-UI-UX",
       link: GPT,
     },
     // {

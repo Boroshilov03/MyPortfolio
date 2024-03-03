@@ -51,18 +51,19 @@ function AboutPage() {
 
       {/* About Page Section */}
       <div className="lg:w-1/2 lg:mx-10">
-        <h1 className={"lg:text-[40px] text-[35px] font-bold"}>About Page</h1>
+        <h1 className={"lg:text-[40px] text-[35px] font-bold"}>Hello World👋</h1>
         <p
           className={"mt-5 font-light text-justify"}
           style={{ fontSize: "20px" }}
         >
-          Hey there 👋! I'm an aspiring Computer Science undergrad on a mission
-          to harness the power of technology for positive change. With a knack
-          for full-stack development and a growing interest in AI and machine
-          learning, I'm committed to crafting innovative solutions that make a
-          difference. From Python to MongoDB, I'm fluent in various languages
-          and tools, constantly seeking new challenges to fuel my passion for
-          problem-solving. Let's code our way to a brighter tomorrow!
+          As a Computer Science enthusiast, I thrive on utilizing technology to
+          drive positive change. With expertise in both front-end and back-end
+          development, I craft seamless user interfaces and robust server
+          systems. Engaging in numerous hackathons, I've honed my coding and
+          problem-solving skills, delving deep into languages like Python and
+          tools such as MongoDB. Eager for fresh challenges, I'm committed to
+          pioneering innovative solutions. Let's collaborate and leverage our
+          coding expertise to create a brighter tomorrow!
         </p>
         {/* <div className="mt-5">
           <button class="cursor-pointer group relative flex gap-1 px-8 py-4 bg-black bg-opacity-80 text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 transition font-semibold shadow-md">
