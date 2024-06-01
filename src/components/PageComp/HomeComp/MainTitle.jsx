@@ -1,4 +1,5 @@
-import ProfilePic from "/src/assets/Projects/MirlanB.png";
+import ProfilePic from "/src/assets/pfp-main.png";
+// import ProfilePic from "/src/assets/Projects/MirlanB.png";
 
 function MainTitle() {
   const headingStyle = {
@@ -12,7 +13,7 @@ function MainTitle() {
   return (
     <div className="lg:flex block items-end justify-evenly border-b-4 pb-9 lg:ml-5 relative">
       <img
-        className="w-96 align-bottom rounded-[27px]"
+        className="h-96 align-bottom rounded-[27px]"
         src={ProfilePic}
         alt="Profile"
       />
