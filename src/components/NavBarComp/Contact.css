@@ -35,6 +35,3 @@ a:after {
   transition-property: width, left;
 }
 
-.dark .contact_dark {
-  color: #f6faff;
-}
