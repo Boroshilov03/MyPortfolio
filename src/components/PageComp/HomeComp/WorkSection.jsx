@@ -8,9 +8,10 @@ import FoodTruck from "/src/assets/Projects/FoodTruck1.png";
 const ProjectCard = ({ dataItem }) => {
   const { link, title, website } = dataItem;
 
-  const imageClass = title === "MovieLand"
-    ? "object-cover hover:scale-105 transform transition-transform duration-500 w-full h-full rounded-lg"
-    : "object-contain hover:scale-105 transform transition-transform duration-500 w-full h-full rounded-lg";
+  const imageClass =
+    title === "MovieLand"
+      ? "object-cover hover:scale-105 transform transition-transform duration-500 w-full h-full rounded-lg"
+      : "object-contain hover:scale-105 transform transition-transform duration-500 w-full h-full rounded-lg";
 
   return (
     <li className="lg:w-[47%] mb-10 relative">
@@ -41,7 +42,7 @@ function WorkSection() {
     },
     {
       title: "Food Truck Finder",
-      website: "https://github.com/Boroshilov03/GPT3-UI-UX",
+      website: "https://github.com/Boroshilov03/GrubWheels",
       link: FoodTruck,
     },
     {
