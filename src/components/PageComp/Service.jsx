@@ -19,15 +19,15 @@ const Service = () => {
      const data = [
         {
             title: 'Design',
-            description: 'I make web designs that engage your audience and create the user experience you want.'
+            description: 'I make web designs that engage the audience and create the great user experience.'
         },
         {
             title: 'Development',
             description: 'Bringing visuals to life through developing highly functional web solutions.'
         },
         {
-            title: 'The Full Package',
-            description: 'Get the best of both worlds for your website, capture your brand identity and get fully functional features.'
+            title: 'Collaboration & Fun',
+            description: 'Work together to create a website that reflects your brand identity while enjoying the process.'
         },
      ]
 

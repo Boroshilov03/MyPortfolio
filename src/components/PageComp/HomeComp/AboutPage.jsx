@@ -1,7 +1,7 @@
 import Logo from "./Logo";
 import CSULBLogo from "/src/assets/csulb.png";
 import LaHacks from "/src/assets/lahacks1.png";
-import BeachHacks from "/src/assets/large-removebg-preview.png";
+import Bazalu from "/src/assets/BudgetP/Bazalu.jpg";
 function AboutPage() {
   return (
     <div
@@ -14,6 +14,22 @@ function AboutPage() {
           Relevant Experience
         </h1>
         <ul className={"mt-5 flex flex-col gap-5"}>
+          <div className="flex gap-3">
+            <img className="w-12" src={Bazalu} alt="" />
+            <li>
+              Bazalu - Software Developer Intern
+              <br />
+              <span className="font-light">April of 2024 - Current</span>
+            </li>
+          </div>{" "}
+          <div className="flex gap-3">
+            <img className="w-12" src={LaHacks} alt="" />
+            <li>
+              LA HACKS 2024 - Hackaton
+              <br />
+              <span className="font-light">April of 2024</span>
+            </li>
+          </div>
           <div className="flex gap-3">
             <Logo />
             <li>
@@ -30,40 +46,42 @@ function AboutPage() {
               <span className="font-light">January - June of 2023</span>
             </li>
           </div>
-          <div className="flex gap-3">
-            <img className="w-12" src={LaHacks} alt="" />
-            <li>
-              LA HACKS - UCLA Hackaton
-              <br />
-              <span className="font-light">April of 2023</span>
-            </li>
-          </div>
-          <div className="flex gap-3">
-            <img className="w-12" src={BeachHacks} alt="" />
-            <li>
-              BeachHacks 7.0 - CSULB Hackaton
-              <br />
-              <span className="font-light">February of 2023</span>
-            </li>
-          </div>
         </ul>
       </div>
 
       {/* About Page Section */}
       <div className="lg:w-1/2 lg:mx-10">
-        <h1 className={"lg:text-[40px] text-[35px] font-bold"}>Hello World👋</h1>
+        <h1 className={"lg:text-[40px] text-[35px] font-bold"}>
+          Hello World👋
+        </h1>
         <p
           className={"mt-5 font-light text-justify"}
           style={{ fontSize: "20px" }}
         >
-          As a Computer Science enthusiast, I thrive on utilizing technology to
-          drive positive change. With expertise in both front-end and back-end
-          development, I craft seamless user interfaces and robust server
-          systems. Engaging in numerous hackathons, I've honed my coding and
-          problem-solving skills, delving deep into languages like Python and
-          tools such as MongoDB. Eager for fresh challenges, I'm committed to
-          pioneering innovative solutions. Let's collaborate and leverage our
-          coding expertise to create a brighter tomorrow!
+          Hello! I'm Mirlan Boroshilov, a Computer Science student at California
+          State University, Long Beach, with a passion for full-stack
+          development. I specialize in{" "}
+          <span style={{ color: "#17f1d1" }}>
+            <strong>Python</strong>
+          </span>
+          ,
+          <span style={{ color: "#A374FF" }}>
+            <strong> C#</strong>
+          </span>
+          ,{" "}
+          <span style={{ color: "#ff8709" }}>
+            <strong>JavaScript</strong>
+          </span>
+          , and{" "}
+          <span style={{ color: "#3b9ed4" }}>
+            {" "}
+            <strong>React</strong>
+          </span>
+          , and recently won LA Hacks 2024 for building an innovative heart
+          disease predictor. Currently, I am an intern, gaining hands-on
+          experience in an Agile development team. I'm always excited about the
+          opportunity to create something unique. Thank you for visiting my
+          portfolio!
         </p>
         {/* <div className="mt-5">
           <button class="cursor-pointer group relative flex gap-1 px-8 py-4 bg-black bg-opacity-80 text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 transition font-semibold shadow-md">

@@ -5,6 +5,7 @@ a {
   position: relative;
   border: none;
   background: none;
+  color: white; /* Use the variable for text color */
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: color;
@@ -29,9 +30,8 @@ a:after {
   position: absolute;
   width: 0%;
   height: 2px;
-  background-color: #000000;
+  background-color: var(--underline-color-light); /* Use the variable for underline color */
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: width, left;
 }
-

@@ -1,5 +1,5 @@
 import BudgetPal from "/src/assets/Projects/BudjetPal.png";
-import J4J from "/src/assets/Projects/J4Jpic2.png";
+import J4J from "/src/assets/Projects/j4jpic2.png";
 import MovieLand from "/src/assets/Projects/MovieLand.png";
 import QuoteGen from "/src/assets/Projects/QuoteGen.png";
 import GPT from "/src/assets/Projects/GPT-3.png";
