@@ -19,14 +19,16 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className={`flex flex-col gap-7 p-5 ${theme}`}>
+      <div className={`min-h-screen ${theme} transition-all duration-500`}>
         <NavBar toggleTheme={toggleTheme} />
-        <MainTitle />
-        <AboutPage />
-        <SkillSet />
-        <WorkSection />
-        <Service />
-        <Contact />
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <MainTitle />
+          <AboutPage />
+          <SkillSet />
+          <WorkSection />
+          <Service />
+          <Contact />
+        </main>
         <FooterNav />
       </div>
     </ThemeContext.Provider>

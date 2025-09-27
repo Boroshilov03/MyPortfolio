@@ -1,20 +1,75 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Button from "./Button";
 
 function NavBar({ toggleTheme }) {
-  return (
-    <div className={"flex justify-between font-light text-lg items-center"}>
-      <h1 className="lg:ml-10 text-2xl">Mirlan Boroshilov</h1>
-      <h1 className="flex">
-        <Button toggleTheme={toggleTheme} />
-      </h1>
+  const [isScrolled, setIsScrolled] = useState(false);
 
-      <span className=" items-center border-2 px-2.5 py-0.5 rounded-full gap-2 lg:inline-flex hidden">
-        <span className="absolute inline-flex w-4 h-4 animate-pulse me-1 bg-green-500 rounded-full"></span>
-        <span className="relative w-4 h-4 animate-ping me-1 bg-green-500 rounded-full"></span>
-        Available for internship
-      </span>
-    </div>
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg' 
+        : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo */}
+          <div className="flex items-center">
+            <a 
+              href="#home" 
+              className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Mirlan Boroshilov
+            </a>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="hidden md:flex items-center space-x-8">
+            <a 
+              href="#aboutSection" 
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300"
+            >
+              About
+            </a>
+            <a 
+              href="#workSection" 
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300"
+            >
+              Projects
+            </a>
+            <a 
+              href="#contact" 
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300"
+            >
+              Contact
+            </a>
+          </div>
+
+          {/* Right Side */}
+          <div className="flex items-center space-x-4">
+            {/* Status Badge */}
+            <div className="hidden lg:flex items-center bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-3 py-1 rounded-full text-sm font-medium">
+              <span className="relative flex h-2 w-2 mr-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
+              Available for opportunities
+            </div>
+
+            {/* Theme Toggle */}
+            <Button toggleTheme={toggleTheme} />
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 }
 

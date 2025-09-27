@@ -10,6 +10,13 @@
 
 body {
   font-family: "Inter Tight", sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .glassCard {
@@ -42,14 +49,17 @@ html {
 
 .light,
 .dark {
-  transition: background-color 1s ease, color 1s ease; /* Add transition for background-color and color */
+  transition: background-color 1s ease, color 1s ease;
 }
+
 .light {
-  background-color: white;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  color: #1e293b;
 }
+
 .dark {
-  background-color: #0d1013;
-  color: #f6faff;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #f1f5f9;
 }
 
 .toggle {
