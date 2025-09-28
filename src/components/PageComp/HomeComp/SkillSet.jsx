@@ -9,61 +9,61 @@ import POSTGRESQL from "/src/assets/PostgreSQL.png";
 
 const SkillSet = () => {
   const skills = [
-    { 
-      src: Csharp, 
-      alt: "C#", 
+    {
+      src: Csharp,
+      alt: "C#",
       name: "C#",
       category: "Backend",
       color: "from-purple-500 to-purple-700",
-      shadow: "rgba(180, 100, 255, 0.4)" 
+      shadow: "rgba(180, 100, 255, 0.4)",
     },
-    { 
-      src: JS, 
-      alt: "JavaScript", 
+    {
+      src: JS,
+      alt: "JavaScript",
       name: "JavaScript",
       category: "Frontend",
       color: "from-yellow-500 to-yellow-700",
-      shadow: "rgba(255, 255, 0, 0.5)" 
+      shadow: "rgba(255, 255, 0, 0.5)",
     },
-    { 
-      src: REACT, 
-      alt: "React", 
+    {
+      src: REACT,
+      alt: "React",
       name: "React",
       category: "Frontend",
       color: "from-cyan-500 to-cyan-700",
-      shadow: "rgba(173, 216, 230, 0.8)" 
+      shadow: "rgba(173, 216, 230, 0.8)",
     },
-    { 
-      src: PYTHON, 
-      alt: "Python", 
+    {
+      src: PYTHON,
+      alt: "Python",
       name: "Python",
       category: "Backend",
       color: "from-green-500 to-green-700",
-      shadow: "rgba(255, 255, 0, 0.5)" 
+      shadow: "rgba(255, 255, 0, 0.5)",
     },
-    { 
-      src: MONGODB, 
-      alt: "MongoDB", 
+    {
+      src: MONGODB,
+      alt: "MongoDB",
       name: "MongoDB",
       category: "Database",
       color: "from-green-400 to-green-600",
-      shadow: "rgba(144, 238, 144, 0.8)" 
+      shadow: "rgba(144, 238, 144, 0.8)",
     },
-    { 
-      src: GIT, 
-      alt: "Git", 
+    {
+      src: GIT,
+      alt: "Git",
       name: "Git",
       category: "Tools",
       color: "from-gray-500 to-gray-700",
-      shadow: "rgba(211, 211, 211, 0.8)" 
+      shadow: "rgba(211, 211, 211, 0.8)",
     },
-    { 
-      src: NODEJS, 
-      alt: "Node.js", 
+    {
+      src: NODEJS,
+      alt: "Node.js",
       name: "Node.js",
       category: "Backend",
       color: "from-green-400 to-green-600",
-      shadow: "rgba(144, 238, 144, 0.3)" 
+      shadow: "rgba(144, 238, 144, 0.3)",
     },
     {
       src: POSTGRESQL,
@@ -84,7 +84,8 @@ const SkillSet = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
           <p className="text-xl text-gray-600 dark:text-gray-400 mt-6 max-w-2xl mx-auto">
-            A comprehensive toolkit of modern technologies and frameworks I use to build exceptional digital experiences.
+            A comprehensive toolkit of modern technologies and frameworks I use
+            to build exceptional digital experiences.
           </p>
         </div>
 
@@ -94,9 +95,15 @@ const SkillSet = () => {
               key={index}
               className="group relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
             >
-              <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300"
-                   style={{ background: `linear-gradient(135deg, ${skill.color.split(' ')[1]}, ${skill.color.split(' ')[3]})` }}></div>
-              
+              <div
+                className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300"
+                style={{
+                  background: `linear-gradient(135deg, ${
+                    skill.color.split(" ")[1]
+                  }, ${skill.color.split(" ")[3]})`,
+                }}
+              ></div>
+
               <div className="relative z-10 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <img
@@ -108,12 +115,14 @@ const SkillSet = () => {
                     alt={skill.alt}
                   />
                 </div>
-                
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-300 mb-2">
                   {skill.name}
                 </h3>
-                
-                <span className={`inline-block px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r ${skill.color} text-white`}>
+
+                <span
+                  className={`inline-block px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r ${skill.color} text-white`}
+                >
                   {skill.category}
                 </span>
               </div>
@@ -123,7 +132,7 @@ const SkillSet = () => {
 
         {/* Additional Skills Section */}
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-8">
+          <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-700 mb-8">
             Additional Expertise
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
@@ -135,7 +144,7 @@ const SkillSet = () => {
               "Version Control",
               "Problem Solving",
               "Team Collaboration",
-              "Code Review"
+              "Code Review",
             ].map((skill, index) => (
               <span
                 key={index}
