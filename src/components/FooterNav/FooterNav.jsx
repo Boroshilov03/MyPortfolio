@@ -92,10 +92,10 @@ const FooterNav = () => {
             <div className="space-y-2">
               <p className="text-gray-400">
                 <a
-                  href="mailto:mirlan.boroshilov@gmail.com"
+                  href="mailto:boroshilov.mirlan@gmail.com"
                   className="hover:text-white transition-colors duration-300"
                 >
-                  mirlan.boroshilov@gmail.com
+                  boroshilov.mirlan@gmail.com
                 </a>
               </p>
               <p className="text-gray-400">
