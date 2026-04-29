@@ -1,0 +1,322 @@
+.portfolio-flow {
+  --pastel-teal: rgba(94, 234, 212, 0.72);
+  --pastel-lavender: rgba(196, 181, 253, 0.72);
+  --pastel-blue: rgba(147, 197, 253, 0.68);
+  --pastel-mint: rgba(187, 247, 208, 0.72);
+  --pastel-peach: rgba(253, 186, 166, 0.72);
+  --edge-glow: rgba(125, 211, 252, 0.38);
+  color: #334155;
+}
+
+.portfolio-flow-dark {
+  --pastel-teal: rgba(34, 211, 238, 0.72);
+  --pastel-lavender: rgba(217, 70, 239, 0.62);
+  --pastel-blue: rgba(245, 158, 11, 0.58);
+  --edge-glow: rgba(34, 211, 238, 0.22);
+  color: #d4d4d8;
+  background: #111318 !important;
+}
+
+.portfolio-flow-dark .react-flow__pane,
+.portfolio-flow-dark .react-flow__renderer,
+.portfolio-flow-dark .react-flow__background {
+  background-color: #111318 !important;
+}
+
+.portfolio-graph-shell-light {
+  border-color: rgba(255, 255, 255, 0.5);
+  background:
+    radial-gradient(circle at top left, rgba(196, 181, 253, 0.22), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(153, 246, 228, 0.2), transparent 32%),
+    linear-gradient(135deg, rgba(248, 250, 252, 0.95), rgba(239, 246, 255, 0.88), rgba(245, 243, 255, 0.9));
+}
+
+.portfolio-graph-shell-dark {
+  border-color: rgba(31, 41, 55, 0.9);
+  background:
+    radial-gradient(circle at 16% 12%, rgba(15, 23, 42, 0.55), transparent 30%),
+    radial-gradient(circle at 82% 18%, rgba(24, 24, 27, 0.52), transparent 32%),
+    linear-gradient(135deg, #111318, #0d1016 48%, #090b10);
+}
+
+.portfolio-graph-shell::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at 50% 42%, black, transparent 72%);
+  opacity: 0.22;
+}
+
+.portfolio-graph-shell-dark::before {
+  background:
+    linear-gradient(rgba(24, 28, 36, 0.96) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 28, 36, 0.9) 1px, transparent 1px);
+  opacity: 0.58;
+}
+
+.portfolio-graph-shell::after {
+  position: absolute;
+  inset: auto 12% -22% 12%;
+  z-index: 0;
+  height: 34%;
+  pointer-events: none;
+  content: "";
+  background: radial-gradient(ellipse at center, rgba(94, 234, 212, 0.22), transparent 68%);
+  filter: blur(28px);
+}
+
+.portfolio-graph-shell-dark::after {
+  background:
+    linear-gradient(90deg, transparent, rgba(31, 41, 55, 0.08), transparent),
+    radial-gradient(ellipse at center, rgba(24, 28, 36, 0.12), transparent 72%);
+  transform: skewY(-5deg);
+}
+
+.portfolio-graph-shell .react-flow {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-flow .react-flow__viewport {
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.portfolio-flow .react-flow__node {
+  transition:
+    opacity 240ms ease,
+    filter 240ms ease;
+  will-change: transform, opacity;
+}
+
+.portfolio-node-person {
+  z-index: 12 !important;
+}
+
+.portfolio-node-category {
+  z-index: 8 !important;
+}
+
+.portfolio-node-item {
+  z-index: 4 !important;
+}
+
+.portfolio-node-visible {
+  opacity: 1;
+  filter: saturate(1);
+}
+
+.portfolio-node-dim {
+  opacity: 0.18;
+  filter: saturate(0.55) blur(0.15px);
+}
+
+.portfolio-flow .react-flow__edge-path {
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 7px var(--edge-glow));
+  transition:
+    opacity 220ms ease,
+    stroke 220ms ease,
+    stroke-width 220ms ease,
+    filter 220ms ease;
+}
+
+.portfolio-flow .react-flow__edge-text {
+  paint-order: stroke;
+  stroke: rgba(255, 255, 255, 0.52);
+  stroke-width: 3px;
+}
+
+.portfolio-flow-dark .react-flow__edge-text {
+  stroke: rgba(3, 7, 18, 0.92);
+}
+
+.portfolio-flow .react-flow__edge-textbg {
+  filter: drop-shadow(0 6px 12px rgba(125, 211, 252, 0.12));
+}
+
+.portfolio-flow-dark .react-flow__edge-textbg {
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.35));
+}
+
+.portfolio-flow .portfolio-edge-active .react-flow__edge-path {
+  filter:
+    drop-shadow(0 0 7px rgba(94, 234, 212, 0.42))
+    drop-shadow(0 0 12px rgba(196, 181, 253, 0.18));
+}
+
+.portfolio-flow-dark .portfolio-edge-active .react-flow__edge-path {
+  filter:
+    drop-shadow(0 0 5px rgba(34, 211, 238, 0.24))
+    drop-shadow(0 0 11px rgba(245, 158, 11, 0.1));
+}
+
+.portfolio-flow .portfolio-edge-muted .react-flow__edge-path {
+  filter: none;
+}
+
+.portfolio-flow .react-flow__edge:hover .react-flow__edge-path,
+.portfolio-flow .react-flow__edge.selected .react-flow__edge-path {
+  stroke-width: 3.3px !important;
+  filter:
+    drop-shadow(0 0 8px rgba(196, 181, 253, 0.55))
+    drop-shadow(0 0 14px rgba(94, 234, 212, 0.24));
+}
+
+.portfolio-flow-dark .react-flow__edge:hover .react-flow__edge-path,
+.portfolio-flow-dark .react-flow__edge.selected .react-flow__edge-path {
+  filter:
+    drop-shadow(0 0 7px rgba(217, 70, 239, 0.26))
+    drop-shadow(0 0 11px rgba(34, 211, 238, 0.16));
+}
+
+.portfolio-flow .react-flow__handle {
+  width: 10px;
+  height: 10px;
+  border: 0;
+  background: linear-gradient(135deg, var(--pastel-teal), var(--pastel-lavender));
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.62),
+    0 0 14px rgba(147, 197, 253, 0.32);
+  opacity: 0.88;
+  transition:
+    transform 160ms ease,
+    opacity 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.portfolio-flow-dark .react-flow__handle {
+  box-shadow:
+    0 0 0 3px rgba(3, 7, 18, 0.9),
+    0 0 12px rgba(34, 211, 238, 0.24);
+  opacity: 0.8;
+}
+
+.portfolio-flow .react-flow__handle:hover {
+  opacity: 1;
+  transform: scale(1.25);
+  box-shadow:
+    0 0 0 4px rgba(255, 255, 255, 0.72),
+    0 0 18px rgba(94, 234, 212, 0.48);
+}
+
+.portfolio-flow .react-flow__controls {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.56);
+  box-shadow: 0 18px 42px rgba(125, 211, 252, 0.18);
+  backdrop-filter: blur(22px);
+}
+
+.portfolio-flow-dark .react-flow__controls {
+  border-color: rgba(8, 145, 178, 0.34);
+  background: rgba(9, 9, 11, 0.84);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.52),
+    inset 0 1px 0 rgba(34, 211, 238, 0.08),
+    0 0 18px rgba(217, 70, 239, 0.06);
+}
+
+.portfolio-flow .react-flow__controls button {
+  border: 0;
+  background: transparent;
+  color: #64748b;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.portfolio-flow .react-flow__controls button:hover {
+  background: rgba(224, 242, 254, 0.74);
+  color: #0f766e;
+  transform: scale(1.05);
+}
+
+.portfolio-flow-dark .react-flow__controls button {
+  color: #cbd5e1;
+}
+
+.portfolio-flow-dark .react-flow__controls button:hover {
+  background: rgba(8, 145, 178, 0.16);
+  color: #67e8f9;
+}
+
+.portfolio-flow .react-flow__panel {
+  font-family: inherit;
+}
+
+.portfolio-flow .react-flow__minimap {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  border-radius: 18px;
+  box-shadow: 0 18px 42px rgba(196, 181, 253, 0.18);
+  backdrop-filter: blur(18px);
+}
+
+.portfolio-flow-dark .react-flow__minimap {
+  border-color: rgba(8, 145, 178, 0.34);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.52),
+    inset 0 1px 0 rgba(34, 211, 238, 0.08),
+    0 0 18px rgba(217, 70, 239, 0.06);
+}
+
+.portfolio-flow .react-flow__attribution {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.68);
+  color: rgba(71, 85, 105, 0.72);
+  backdrop-filter: blur(14px);
+}
+
+.portfolio-flow-dark .react-flow__attribution {
+  background: rgba(9, 9, 11, 0.82);
+  color: rgba(103, 232, 249, 0.72);
+}
+
+.portfolio-detail-panel {
+  margin: 18px;
+}
+
+.portfolio-flow .react-flow__nodesselection-rect {
+  border: 2px solid rgba(196, 181, 253, 0.72);
+  border-radius: 14px;
+  background-color: rgba(196, 181, 253, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(94, 234, 212, 0.16);
+}
+
+.portfolio-flow .react-flow__node:focus-visible,
+.portfolio-flow .react-flow__edge:focus-visible {
+  border-radius: 18px;
+  outline: 3px solid rgba(94, 234, 212, 0.66);
+  outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .portfolio-flow .react-flow__minimap {
+    display: none;
+  }
+
+  .portfolio-flow .react-flow__controls {
+    right: 18px;
+    bottom: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-flow *,
+  .portfolio-flow *::before,
+  .portfolio-flow *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

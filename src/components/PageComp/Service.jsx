@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const ServiceCard = ({ dataItem }) => {
   const { title, description, index, icon } = dataItem;
 

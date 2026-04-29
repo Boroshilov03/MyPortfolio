@@ -1,9 +1,6 @@
-import React from "react";
-
-function Button({ toggleTheme }) {
-    const handleToggle = () => {
-      toggleTheme(); // Call the toggleTheme function passed as prop
-    };
+/* eslint-disable react/prop-types */
+function Button({ toggleTheme, theme }) {
+  const isDark = theme === "dark";
 
   return (
     <div className="container">
@@ -12,7 +9,8 @@ function Button({ toggleTheme }) {
           id="switch"
           className="input"
           type="checkbox"
-          onClick={handleToggle}
+          checked={isDark}
+          onChange={toggleTheme}
         />
         <div className="icon icon--moon">
           <svg

@@ -1,15 +1,13 @@
-import React, { createContext, useState } from "react";
-import { createRoot } from "react-dom/client";
+import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBarComp/NavBar";
-import MainTitle from "./components/PageComp/HomeComp/MainTitle";
 import AboutPage from "./components/PageComp/HomeComp/AboutPage";
 import WorkSection from "./components/PageComp/HomeComp/WorkSection";
 import Service from "./components/PageComp/Service";
 import Contact from "./components/NavBarComp/Contact";
-import SkillSet from "./components/PageComp/HomeComp/SkillSet";
-import FooterNav from "./components/FooterNav/FooterNav";
-
-export const ThemeContext = createContext(null);
+import GraphHome from "./pages/GraphHome";
+import PageLayout from "./layouts/PageLayout";
+import { ThemeContext } from "./context/ThemeContext";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -17,19 +15,49 @@ function App() {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };
 
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+  }, [theme]);
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className={`min-h-screen ${theme} transition-all duration-500`}>
-        <NavBar toggleTheme={toggleTheme} />
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <MainTitle />
-          <AboutPage />
-          <SkillSet />
-          <WorkSection />
-          <Service />
-          <Contact />
-        </main>
-        <FooterNav />
+        <NavBar toggleTheme={toggleTheme} theme={theme} />
+        <Routes>
+          <Route path="/" element={<GraphHome />} />
+          <Route
+            path="/about"
+            element={
+              <PageLayout>
+                <AboutPage />
+              </PageLayout>
+            }
+          />
+          <Route
+            path="/projects"
+            element={
+              <PageLayout>
+                <WorkSection />
+              </PageLayout>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <PageLayout>
+                <Contact />
+              </PageLayout>
+            }
+          />
+          <Route
+            path="/services"
+            element={
+              <PageLayout>
+                <Service />
+              </PageLayout>
+            }
+          />
+        </Routes>
       </div>
     </ThemeContext.Provider>
   );

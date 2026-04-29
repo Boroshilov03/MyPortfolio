@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Logo from "./Logo";
 import CSULBLogo from "/src/assets/csulb.png";
 import LaHacks from "/src/assets/lahacks1.png";

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 const Contact = () => {
   return (
     <section id="contact" className="py-20">

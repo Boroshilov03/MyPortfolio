@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import BudgetPal from "/src/assets/Projects/BudjetPal.png";
 import J4J from "/src/assets/Projects/j4jpic2.png";
 import MovieLand from "/src/assets/Projects/MovieLand.png";

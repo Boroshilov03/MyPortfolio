@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const FooterNav = () => {
   return (
@@ -51,28 +51,36 @@ const FooterNav = () => {
             <h4 className="text-lg font-semibold text-white">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#aboutSection"
+                <Link
+                  to="/about"
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#workSection"
+                <Link
+                  to="/projects"
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   Contact
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  Services
+                </Link>
               </li>
               <li>
                 <a
