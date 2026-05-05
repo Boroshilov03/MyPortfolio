@@ -75,6 +75,7 @@ export default function PortfolioGraph() {
   const [expandedCategories, setExpandedCategories] = useState({});
   const [expandedTools, setExpandedTools] = useState({});
   const [showSearch, setShowSearch] = useState(false);
+  const [nodePositions, setNodePositions] = useState({});
 
   const visibleNodes = useMemo(
     () => getVisibleNodes(expandedCategories, expandedTools),
@@ -111,6 +112,7 @@ export default function PortfolioGraph() {
   const renderedNodes = useMemo(() => {
     return visibleNodes.map((node) => ({
       ...node,
+      position: nodePositions[node.id] || node.position,
       selected: node.id === selectedNodeId,
       className: `${
         node.type === "person"
@@ -124,7 +126,7 @@ export default function PortfolioGraph() {
           : "portfolio-node-visible"
       }`,
     }));
-  }, [visibleNodes, selectedNodeId, neighbors]);
+  }, [visibleNodes, selectedNodeId, neighbors, nodePositions]);
 
   /* ---------- EDGES ---------- */
 
@@ -217,6 +219,13 @@ export default function PortfolioGraph() {
     [navigate]
   );
 
+  const onNodeDrag = useCallback((_, node) => {
+    setNodePositions((prev) => ({
+      ...prev,
+      [node.id]: node.position,
+    }));
+  }, []);
+
   const resetView = () => {
     setExpandedCategories({});
     setExpandedTools({});
@@ -241,6 +250,7 @@ export default function PortfolioGraph() {
         nodeTypes={nodeTypes}
         onNodeClick={onNodeClick}
         onNodeDoubleClick={onNodeDoubleClick}
+        onNodeDrag={onNodeDrag}
         onPaneClick={() => setSelectedNodeId(null)}
         className={flowClassName}
         style={{
@@ -249,7 +259,7 @@ export default function PortfolioGraph() {
         fitView
         minZoom={0.3}
         maxZoom={2}
-        nodesDraggable={false}
+        nodesDraggable={true}
         nodesConnectable={false}
         elementsSelectable={false}
         elevateNodesOnSelect={false}
