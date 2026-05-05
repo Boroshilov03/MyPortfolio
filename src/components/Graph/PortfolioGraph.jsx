@@ -139,7 +139,7 @@ export default function PortfolioGraph() {
 
       return {
         ...edge,
-        type: "smoothstep",
+        type: "bezier",
         className: active ? "portfolio-edge-active" : "portfolio-edge-muted",
         labelShowBg: true,
         labelBgBorderRadius: 12,
@@ -230,6 +230,7 @@ export default function PortfolioGraph() {
     setExpandedCategories({});
     setExpandedTools({});
     setSelectedNodeId(null);
+    setNodePositions({});
 
     fitView({
       padding: 0.18,
@@ -266,7 +267,7 @@ export default function PortfolioGraph() {
         panOnScroll
         onlyRenderVisibleElements
         defaultEdgeOptions={{
-          type: "smoothstep",
+          type: "bezier",
           interactionWidth: 24,
         }}
       >
